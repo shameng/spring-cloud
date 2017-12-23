@@ -23,6 +23,6 @@ public class ConfigController {
 
     @RequestMapping("/from")
     public String from() {
-        return this.from + " --- " + env.getProperty("from", "undefined");
+        return this.from + " ----- " + env.getProperty("from", "undefined");
     }
 }
