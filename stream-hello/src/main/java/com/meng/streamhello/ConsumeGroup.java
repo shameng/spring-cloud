@@ -7,16 +7,17 @@ import org.springframework.cloud.stream.annotation.StreamListener;
 import org.springframework.cloud.stream.messaging.Sink;
 
 /**
- * @author xindemeng
- * @datetime 2018/1/7 22:42
- */
-//@EnableBinding({SinkSender.class})
-public class SinkReceiver {
+ * @author meng
+ * @create 2018-01-19 13:39
+ **/
+@EnableBinding(value = Sink.class)
+public class ConsumeGroup {
 
-    private static final Logger logger = LoggerFactory.getLogger(SinkReceiver.class);
+    private static final Logger logger = LoggerFactory.getLogger(ConsumeGroup.class);
 
     @StreamListener(Sink.INPUT)
-    public void receiver(Object payload) {
-        logger.info("receiverd: " + payload);
+    public void receive(Object payload) {
+        logger.info("Received: " + payload);
     }
+
 }

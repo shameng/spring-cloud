@@ -11,7 +11,7 @@ import org.springframework.messaging.handler.annotation.SendTo;
  * @author xindemeng
  * @datetime 2018/1/19 1:06
  */
-@EnableBinding(value = Processor.class)
+//@EnableBinding(value = Processor.class)
 public class App1 {
 
     private static Logger logger = LoggerFactory.getLogger(App1.class);
